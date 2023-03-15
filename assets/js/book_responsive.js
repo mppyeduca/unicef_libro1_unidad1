@@ -437,8 +437,8 @@ function toggleGuaraniAudioTest(){
 function optionPress(value, indicator_id, order){
     clearTimeout(interval_function);
     is_enter = false;
-    if (audio_element && !audio_element.paused) {
-        $('#play-pause').click();
+    if (is_play) {
+        playPause()
     }
     $("#" + indicator_id).addClass("btn_selected");
     setTimeout(() => {
@@ -522,8 +522,8 @@ function optionPress(value, indicator_id, order){
 function optionPressShow(value, indicator_id, order, show_option_by_id){
     clearTimeout(interval_function);
     is_enter = false;
-    if (audio_element && !audio_element.paused) {
-        $('#play-pause').click();
+    if (is_play) {
+        playPause();
     }
     $("#" + indicator_id).addClass("btn_selected");
     setTimeout(() => {
@@ -615,8 +615,8 @@ function optionPressShow(value, indicator_id, order, show_option_by_id){
 function insertText(indicator_id, insert_text, target, hide_target){
     clearTimeout(interval_function);
     is_enter = false;
-    if (audio_element && !audio_element.paused) {
-        $('#play-pause').click();
+    if (is_play) {
+        playPause();
     }
     $("#" + indicator_id).addClass("btn_selected");
     setTimeout(() => {
@@ -655,8 +655,8 @@ function onMouseLeave(){
 function onclickButtonAudio(indicator_id){
     clearTimeout(interval_function);
     is_enter = false;
-    if (audio_element && !audio_element.paused) {
-        $('#play-pause').click();
+    if (is_play) {
+        playPause();
     }
     $("#" + indicator_id).addClass("btn_selected");
     setTimeout(() => {
