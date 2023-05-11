@@ -31,7 +31,7 @@ var video_extension = '.mp4';
 
 var video = undefined;
 
-var text_slides = [4, 10];
+var text_slides = [];
 
 var first_iteration = true;
 var animation_ongoing = false;
@@ -1002,9 +1002,11 @@ function toggleMute(){
     if(global_audo_muted){
         unMuteAudio();
         $("#btn_audio").fadeTo("fast", 1);
+        $("#audio_config").fadeTo("fast", 1);
     }else{
         muteAudio();
         $("#btn_audio").fadeTo("fast", 0.3);
+        $("#audio_config").fadeTo("fast", 0.3);
     }
     goToSlide(global_currentSlide);
 }
